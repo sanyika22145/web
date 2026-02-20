@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -40,29 +44,66 @@
         </p>
       </div>
 
+      <div id="successAlert" class="alert alert-success collapse" role="alert">
+        Sikeres elküldött üzenet!
+      </div>
+
       <section class="contact-grid">
         <form class="contact-form" aria-label="Kapcsolati űrlap">
           <label for="name">Név</label>
-          <input id="name" name="name" type="text" placeholder="Pl. Kovács Ádám" required />
+          <input
+            id="name"
+            name="name"
+            class="form-control"
+            type="text"
+            placeholder="Pl. Kovács Ádám"
+            required
+          />
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="adam@email.hu" required />
+          <input
+            id="email"
+            name="email"
+            class="form-control"
+            type="email"
+            placeholder="adam@email.hu"
+            required
+          />
 
           <label for="topic">Téma</label>
-          <select id="topic" name="topic">
+          <select id="topic" name="topic" class="form-select">
             <option value="modellek">Modellbemutató</option>
             <option value="elektromos">Elektromos járművek</option>
             <option value="apolas">Autóápolás</option>
           </select>
 
           <label for="message">Üzenet</label>
-          <textarea id="message" name="message" rows="5" placeholder="Írd ide az üzeneted..." required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            class="form-control"
+            rows="5"
+            placeholder="Írd ide az üzeneted..."
+            required
+          ></textarea>
 
-          <button class="button primary" type="submit">Üzenet küldése</button>
+          <button
+            class="button primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#successAlert"
+            aria-expanded="false"
+            aria-controls="successAlert"
+          >
+            Üzenet küldése
+          </button>
         </form>
 
         <aside class="info-card">
           <h2>Munkamegosztás</h2>
+          <div class="alert alert-info" role="alert">
+            A szerepek rugalmasan cserélhetők, a lényeg az egyértelmű feladatkör.
+          </div>
           <p>
             <strong>Tanuló 1 – Tartalomkészítő:</strong> szövegek, témakidolgozás,
             képek kiválasztása, bemutatók összegyűjtése.
@@ -93,5 +134,6 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
