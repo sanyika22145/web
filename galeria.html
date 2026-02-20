@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galéria – Autók és motorok</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="brand">
+          <span class="brand-mark">A&M</span>
+          <div>
+            <p class="brand-title">Autók és motorok</p>
+            <p class="brand-subtitle">Fiatalok kedvencei</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Fő navigáció">
+          <a class="nav-link" href="index.html">Főoldal</a>
+          <a class="nav-link" href="tema.html">Téma</a>
+          <a class="nav-link active" href="galeria.html">Galéria</a>
+          <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <div class="section-title">
+        <h1>Galéria és kiemelt pillanatok</h1>
+        <p>Képes gyűjtemény és egy egyszerű slider a hangulatért.</p>
+      </div>
+
+      <section class="slider" aria-label="Kiemelt képek">
+        <button class="slider-btn" data-direction="prev" aria-label="Előző kép">
+          ‹
+        </button>
+        <div class="slider-frame">
+          <img
+            class="slider-image active"
+            src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1000&q=80"
+            alt="Sportautó az úton"
+          />
+          <img
+            class="slider-image"
+            src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1000&q=80"
+            alt="Motoros túra"
+          />
+          <img
+            class="slider-image"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+            alt="Éjszakai városi közlekedés"
+          />
+        </div>
+        <button class="slider-btn" data-direction="next" aria-label="Következő kép">
+          ›
+        </button>
+      </section>
+
+      <section class="gallery-grid">
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80"
+            alt="Autóápolás"
+          />
+          <figcaption>Autóápolás – tiszta külső, jobb benyomás.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
+            alt="Sportos dizájn"
+          />
+          <figcaption>Sportos dizájn és prémium részletek.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=800&q=80"
+            alt="Motor a városban"
+          />
+          <figcaption>Könnyű motorok városi közlekedéshez.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+            alt="Éjszakai város"
+          />
+          <figcaption>Városi hangulat esti fényekkel.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80"
+            alt="Elektromos autó"
+          />
+          <figcaption>Elektromos autó – jövőálló választás.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=800&q=80"
+            alt="Klasszikus forma"
+          />
+          <figcaption>Klasszikus forma, modern technika.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Slider vezérlés</h4>
+          <p class="small">Gombokkal vagy automatikus váltással.</p>
+        </div>
+        <div>
+          <h4>Kapcsolat</h4>
+          <a href="kapcsolat.html">Kapcsolat oldal</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

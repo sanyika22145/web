@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kapcsolat – Autók és motorok</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="brand">
+          <span class="brand-mark">A&M</span>
+          <div>
+            <p class="brand-title">Autók és motorok</p>
+            <p class="brand-subtitle">Fiatalok kedvencei</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Fő navigáció">
+          <a class="nav-link" href="index.html">Főoldal</a>
+          <a class="nav-link" href="tema.html">Téma</a>
+          <a class="nav-link" href="galeria.html">Galéria</a>
+          <a class="nav-link active" href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <div class="section-title">
+        <h1>Kapcsolat</h1>
+        <p>
+          Küldj üzenetet, ha kérdésed van a témával kapcsolatban, vagy szeretnél
+          együtt dolgozni a projekten.
+        </p>
+      </div>
+
+      <section class="contact-grid">
+        <form class="contact-form" aria-label="Kapcsolati űrlap">
+          <label for="name">Név</label>
+          <input id="name" name="name" type="text" placeholder="Pl. Kovács Ádám" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="adam@email.hu" required />
+
+          <label for="topic">Téma</label>
+          <select id="topic" name="topic">
+            <option value="modellek">Modellbemutató</option>
+            <option value="elektromos">Elektromos járművek</option>
+            <option value="apolas">Autóápolás</option>
+          </select>
+
+          <label for="message">Üzenet</label>
+          <textarea id="message" name="message" rows="5" placeholder="Írd ide az üzeneted..." required></textarea>
+
+          <button class="button primary" type="submit">Üzenet küldése</button>
+        </form>
+
+        <aside class="info-card">
+          <h2>Munkamegosztás</h2>
+          <p>
+            <strong>Tanuló 1 – Tartalomkészítő:</strong> szövegek, témakidolgozás,
+            képek kiválasztása, bemutatók összegyűjtése.
+          </p>
+          <p>
+            <strong>Tanuló 2 – Technikai megvalósító:</strong> HTML/CSS/JS struktúra,
+            oldalelrendezés, galéria és űrlap kialakítása.
+          </p>
+          <div class="contact-box">
+            <h3>Elérhetőség (minta)</h3>
+            <p>Email: projekt@iskola.hu</p>
+            <p>Iskola: Példa Gimnázium</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>Köszönjük a figyelmet</h4>
+          <p class="small">A projekt bemutatja a fiatalok járműválasztási trendjeit.</p>
+        </div>
+        <div>
+          <h4>Vissza</h4>
+          <a href="index.html">Főoldal</a>
+          <a href="galeria.html">Galéria</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
