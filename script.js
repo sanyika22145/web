@@ -1,38 +1,47 @@
-const sliderImages = Array.from(document.querySelectorAll(".slider-image"));
+const sliderImages = document.querySelectorAll(".slider-image");
 const sliderButtons = document.querySelectorAll(".slider-btn");
+const contactForm = document.querySelector(".contact-form");
 
 let currentIndex = 0;
 
-const setActiveImage = (index) => {
+const showImage = (index) => {
   sliderImages.forEach((image, i) => {
     image.classList.toggle("active", i === index);
   });
 };
 
-const goToNext = (direction) => {
+const step = (direction) => {
   if (!sliderImages.length) {
     return;
   }
 
-  const lastIndex = sliderImages.length - 1;
-  if (direction === "next") {
-    currentIndex = currentIndex === lastIndex ? 0 : currentIndex + 1;
-  } else {
-    currentIndex = currentIndex === 0 ? lastIndex : currentIndex - 1;
-  }
-  setActiveImage(currentIndex);
+  currentIndex =
+    direction === "next"
+      ? (currentIndex + 1) % sliderImages.length
+      : (currentIndex - 1 + sliderImages.length) % sliderImages.length;
+
+  showImage(currentIndex);
 };
 
 sliderButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    goToNext(button.dataset.direction);
+    step(button.dataset.direction);
   });
 });
 
-setActiveImage(currentIndex);
+if (sliderImages.length) {
+  showImage(currentIndex);
+  if (sliderImages.length > 1) {
+    setInterval(() => {
+      step("next");
+    }, 6000);
+  }
+}
 
-if (sliderImages.length > 1) {
-  setInterval(() => {
-    goToNext("next");
-  }, 6000);
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Sikeres elküldött üzenet!");
+    contactForm.reset();
+  });
 }
