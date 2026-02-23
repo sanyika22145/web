@@ -83,7 +83,7 @@
             required
           ></textarea>
 
-          <button class="button primary" type="submit">
+          <button class="button primary" type="submit" onclick="kuld(event)">
             Üzenet küldése
           </button>
         </form>
@@ -125,6 +125,21 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+      function kuld(e){
+        e.preventDefault();
+    
+        let nev = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let uzenet = document.getElementById("message").value;
+    
+        if(nev === "" || email === "" || uzenet === ""){
+          alert("Ki kell minden mezőt tölteni!");
+        } else {
+          alert("Sikeres küldés!");
+          document.querySelector(".contact-form").reset();
+        }
+      }
+    </script>
   </body>
 </html>
