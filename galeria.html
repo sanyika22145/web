@@ -16,35 +16,51 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-content">
-        <div class="brand">
-          <span class="brand-mark">A&M</span>
-          <div>
-            <p class="brand-title">Autók és motorok</p>
-            <p class="brand-subtitle">Fiatalok kedvencei</p>
+  <body class="bg-light">
+    <header class="sticky-top bg-white shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span
+              class="brand-mark badge bg-primary rounded-circle d-inline-flex align-items-center justify-content-center"
+            >
+              A&M
+            </span>
+            <span class="fw-bold">Autók és motorok</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Navigáció megnyitása"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="index.html">Főoldal</a>
+              <a class="nav-link" href="tema.html">Téma</a>
+              <a class="nav-link active" aria-current="page" href="galeria.html">Galéria</a>
+              <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+            </div>
           </div>
         </div>
-        <nav class="site-nav" aria-label="Fő navigáció">
-          <a class="nav-link" href="index.html">Főoldal</a>
-          <a class="nav-link" href="tema.html">Téma</a>
-          <a class="nav-link active" href="galeria.html">Galéria</a>
-          <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
-        </nav>
-      </div>
+      </nav>
     </header>
 
-    <main class="container page">
-      <div class="section-title">
-        <h1>Galéria és kiemelt pillanatok</h1>
-        <p>Képes gyűjtemény és egy egyszerű slider a hangulatért.</p>
+    <main class="container py-5">
+      <div class="mb-4">
+        <h1 class="fw-bold">Galéria és kiemelt pillanatok</h1>
+        <p class="text-muted">Képes gyűjtemény és egy egyszerű slider a hangulatért.</p>
       </div>
 
-      <section class="carousel-section">
+      <section class="mb-5">
         <div
           id="kiemeltGal"
-          class="carousel slide carousel-fade"
+          class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-sm"
           data-bs-ride="carousel"
           aria-label="Kiemelt képek"
         >
@@ -92,73 +108,93 @@
         </div>
       </section>
 
-      <section class="gallery-grid">
-        <figure class="gallery-item">
-          <div class="gallery-thumb">
+      <section class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <figure class="card h-100 shadow-sm">
             <img
+              class="card-img-top"
               src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80"
               alt="Autóápolás"
             />
-          </div>
-          <figcaption>Autóápolás – tiszta külső, jobb benyomás.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-thumb">
+            <figcaption class="card-body text-muted">
+              Autóápolás – tiszta külső, jobb benyomás.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="card h-100 shadow-sm">
             <img
+              class="card-img-top"
               src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80"
               alt="Sportos dizájn"
             />
-          </div>
-          <figcaption>Sportos dizájn és prémium részletek.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-thumb">
+            <figcaption class="card-body text-muted">
+              Sportos dizájn és prémium részletek.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="card h-100 shadow-sm">
             <img
+              class="card-img-top"
               src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=900&q=80"
               alt="Motor a városban"
             />
-          </div>
-          <figcaption>Könnyű motorok városi közlekedéshez.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-thumb">
+            <figcaption class="card-body text-muted">
+              Könnyű motorok városi közlekedéshez.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="card h-100 shadow-sm">
             <img
+              class="card-img-top"
               src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
               alt="Éjszakai város"
             />
-          </div>
-          <figcaption>Városi hangulat esti fényekkel.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-thumb">
+            <figcaption class="card-body text-muted">
+              Városi hangulat esti fényekkel.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="card h-100 shadow-sm">
             <img
+              class="card-img-top"
               src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80"
               alt="Elektromos autó"
             />
-          </div>
-          <figcaption>Elektromos autó – jövőálló választás.</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <div class="gallery-thumb">
+            <figcaption class="card-body text-muted">
+              Elektromos autó – jövőálló választás.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col">
+          <figure class="card h-100 shadow-sm">
             <img
+              class="card-img-top"
               src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=80"
               alt="Klasszikus forma"
             />
-          </div>
-          <figcaption>Klasszikus forma, modern technika.</figcaption>
-        </figure>
+            <figcaption class="card-body text-muted">
+              Klasszikus forma, modern technika.
+            </figcaption>
+          </figure>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h4>Slider vezérlés</h4>
-          <p class="small">Gombokkal vagy automatikus váltással.</p>
-        </div>
-        <div>
-          <h4>Kapcsolat</h4>
-          <a href="kapcsolat.html">Kapcsolat oldal</a>
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-8">
+            <h4 class="h6 text-uppercase text-secondary">Slider vezérlés</h4>
+            <p class="mb-0 text-light-emphasis">Gombokkal vagy automatikus váltással.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="h6 text-uppercase text-secondary">Kapcsolat</h4>
+            <a class="link-light text-decoration-none" href="kapcsolat.html">Kapcsolat oldal</a>
+          </div>
         </div>
       </div>
     </footer>

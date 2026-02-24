@@ -16,107 +16,163 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-content">
-        <div class="brand">
-          <span class="brand-mark">A&M</span>
-          <div>
-            <p class="brand-title">Autók és motorok</p>
-            <p class="brand-subtitle">Fiatalok kedvencei</p>
+  <body class="bg-light">
+    <header class="sticky-top bg-white shadow-sm">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span
+              class="brand-mark badge bg-primary rounded-circle d-inline-flex align-items-center justify-content-center"
+            >
+              A&M
+            </span>
+            <span class="fw-bold">Autók és motorok</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Navigáció megnyitása"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="index.html">Főoldal</a>
+              <a class="nav-link active" aria-current="page" href="tema.html">Téma</a>
+              <a class="nav-link" href="galeria.html">Galéria</a>
+              <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+            </div>
           </div>
         </div>
-        <nav class="site-nav" aria-label="Fő navigáció">
-          <a class="nav-link" href="index.html">Főoldal</a>
-          <a class="nav-link active" href="tema.html">Téma</a>
-          <a class="nav-link" href="galeria.html">Galéria</a>
-          <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
-        </nav>
-      </div>
+      </nav>
     </header>
 
-    <main class="container page">
-      <div class="section-title">
-        <h1>Téma részletes bemutatása</h1>
-        <p>
+    <main class="container py-5">
+      <div class="mb-4">
+        <h1 class="fw-bold">Téma részletes bemutatása</h1>
+        <p class="text-muted">
           A fiatalok számára a jármű nemcsak közlekedési eszköz, hanem stílus,
           közösség és technológiai érdeklődés is.
         </p>
       </div>
 
-      <section class="topic-block">
-        <div class="topic-text">
+      <section class="row g-4 align-items-center mb-5">
+        <div class="col-lg-6">
           <span class="badge text-bg-primary mb-2">Trend</span>
-          <h2>Népszerű modellbemutatók</h2>
-          <p>
+          <h2 class="h3 fw-bold">Népszerű modellbemutatók</h2>
+          <p class="text-muted">
             A mai trendekben a kompakt, sportos kialakítású autók és a könnyű, jól
             kezelhető motorok dominálnak. A választásnál fontos a dizájn, az élmény
             és a praktikum.
           </p>
-          <ul class="checklist">
-            <li>Városi használatban kedvelt modellek</li>
-            <li>Sportos megjelenés és biztonsági extrák</li>
-            <li>Könnyű kezelhetőség kezdőknek</li>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex gap-2 mb-2">
+              <span class="text-warning">✓</span>
+              <span>Városi használatban kedvelt modellek</span>
+            </li>
+            <li class="d-flex gap-2 mb-2">
+              <span class="text-warning">✓</span>
+              <span>Sportos megjelenés és biztonsági extrák</span>
+            </li>
+            <li class="d-flex gap-2">
+              <span class="text-warning">✓</span>
+              <span>Könnyű kezelhetőség kezdőknek</span>
+            </li>
           </ul>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=80"
-          alt="Fiatalos dizájnú autó"
-        />
+        <div class="col-lg-6">
+          <img
+            class="img-fluid rounded-4 shadow-sm"
+            src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=80"
+            alt="Fiatalos dizájnú autó"
+          />
+        </div>
       </section>
 
-      <section class="topic-block reversed">
-        <div class="topic-text">
+      <section class="row g-4 align-items-center mb-5">
+        <div class="col-lg-6 order-lg-2">
           <span class="badge text-bg-warning mb-2">Elektromos</span>
-          <h2>Elektromos autók és motorok</h2>
-          <p>
+          <h2 class="h3 fw-bold">Elektromos autók és motorok</h2>
+          <p class="text-muted">
             Az elektromos hajtás csendes, gyorsan reagáló, és városban különösen
             hatékony. A töltési lehetőségek bővülésével egyre népszerűbbek ezek a
             járművek.
           </p>
-          <ul class="checklist">
-            <li>Alacsonyabb fenntartási költségek</li>
-            <li>Modern, digitális funkciók</li>
-            <li>Zöldebb közlekedés</li>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex gap-2 mb-2">
+              <span class="text-warning">✓</span>
+              <span>Alacsonyabb fenntartási költségek</span>
+            </li>
+            <li class="d-flex gap-2 mb-2">
+              <span class="text-warning">✓</span>
+              <span>Modern, digitális funkciók</span>
+            </li>
+            <li class="d-flex gap-2">
+              <span class="text-warning">✓</span>
+              <span>Zöldebb közlekedés</span>
+            </li>
           </ul>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80"
-          alt="Elektromos autó töltés közben"
-        />
+        <div class="col-lg-6 order-lg-1">
+          <img
+            class="img-fluid rounded-4 shadow-sm"
+            src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=80"
+            alt="Elektromos autó töltés közben"
+          />
+        </div>
       </section>
 
-      <section class="topic-block">
-        <div class="topic-text">
+      <section class="row g-4 align-items-center">
+        <div class="col-lg-6">
           <span class="badge text-bg-success mb-2">Ápolás</span>
-          <h2>Autóápolási alapok</h2>
-          <p>
+          <h2 class="h3 fw-bold">Autóápolási alapok</h2>
+          <p class="text-muted">
             A rendszeres tisztítás és az alapellenőrzések hosszabb élettartamot
             biztosítanak. Egy egyszerű ápolási rutin rengeteget számít.
           </p>
-          <ul class="checklist">
-            <li>Külső tisztítás és waxolás</li>
-            <li>Gumik és folyadékszintek ellenőrzése</li>
-            <li>Belső tér frissítése és védelem</li>
+          <ul class="list-unstyled mb-0">
+            <li class="d-flex gap-2 mb-2">
+              <span class="text-warning">✓</span>
+              <span>Külső tisztítás és waxolás</span>
+            </li>
+            <li class="d-flex gap-2 mb-2">
+              <span class="text-warning">✓</span>
+              <span>Gumik és folyadékszintek ellenőrzése</span>
+            </li>
+            <li class="d-flex gap-2">
+              <span class="text-warning">✓</span>
+              <span>Belső tér frissítése és védelem</span>
+            </li>
           </ul>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80"
-          alt="Autóápolás, kézi tisztítás"
-        />
+        <div class="col-lg-6">
+          <img
+            class="img-fluid rounded-4 shadow-sm"
+            src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80"
+            alt="Autóápolás, kézi tisztítás"
+          />
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h4>Kapcsolat</h4>
-          <p class="small">Kérdésed van? Írj a kapcsolat oldalon.</p>
-        </div>
-        <div>
-          <h4>Vissza</h4>
-          <a href="index.html">Főoldal</a>
-          <a href="galeria.html">Galéria</a>
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-8">
+            <h4 class="h6 text-uppercase text-secondary">Kapcsolat</h4>
+            <p class="mb-0 text-light-emphasis">Kérdésed van? Írj a kapcsolat oldalon.</p>
+          </div>
+          <div class="col-md-4">
+            <h4 class="h6 text-uppercase text-secondary">Vissza</h4>
+            <div class="d-flex flex-column gap-1">
+              <a class="link-light text-decoration-none" href="index.html">Főoldal</a>
+              <a class="link-light text-decoration-none" href="galeria.html">Galéria</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
